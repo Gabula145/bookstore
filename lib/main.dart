@@ -1,3 +1,4 @@
+import 'package:bookstore/screens/columns.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,13 +11,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Welcome to Flutter',
+      title: 'Welcome to our Bookstore',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Welcome to Flutter'),
+          title: const Text('Welcome to our Bookstore'),
         ),
-        body: const Center(
-          child: Text('Hello Gabula'),
+        body: InkWell(
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Columns(),
+               ));
+          },
+          child: Center(child: Text('Hello Me')),
         ),
       ),
     );
