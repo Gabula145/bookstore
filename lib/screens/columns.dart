@@ -1,17 +1,33 @@
 import 'package:flutter/cupertino.dart';
-
 import 'package:flutter/material.dart';
 
-class Columns extends StatefulWidget {
-  const Columns({Key? key}) : super(key: key);
+class columns extends StatefulWidget {
+  const columns({super.key});
 
   @override
-  State<Columns> createState() => _ColumnsState();
+  State<columns> createState() => _columnsState();
 }
 
-class _ColumnsState extends State<Columns> {
+class _columnsState extends State<columns> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Columns'),
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text("School"),
+          Text("Bus"),
+          Text("Move"),
+          Text("Child"),
+          Text("go"),
+          Text("come"),
+          Text("food"),
+          Text("drinks"),
+        ],
+      ),
+    );
   }
 }
