@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Color.blue,
+        //primarySwatch: Color.blue,
       ),
       home: const MyHomePage(title: 'Flutter Shop'),
     );
@@ -34,8 +34,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -114,7 +112,6 @@ class _MyHomePageState extends State<MyHomePage> {
               );
             },
           ),
-
           ListTile(
             title: Text("Container styling"),
             leading: Icon(Icons.deblur_rounded),
